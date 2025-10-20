@@ -34,6 +34,16 @@ const routes: Array<RouteRecordRaw> = [
         },
       },
       {
+        path: "/memory",
+        name: "memory",
+        component: () => import("../views/MemoryView.vue"),
+        meta: {
+          title: "Zero Point City - 记忆",
+          description: "访问 Zero Point City 的记忆",
+          canonical: `${BASE_URL}/memory`,
+        },
+      },
+      {
         path: "about",
         name: "about",
         component: AboutView,

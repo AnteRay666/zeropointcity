@@ -51,12 +51,10 @@ interface Particle {
 }
 
 const particles: Particle[] = []
-
+import memberData from "@/assets/members.json";
+members.value = memberData.memberlist;
 onMounted(async () => {
   // --- 数据加载 ---
-  const res = await fetch("/src/assets/members.json")
-  const data = await res.json()
-  members.value = data.memberlist
 
   // --- Canvas 初始化 ---
   if (!bgCanvas.value) return
