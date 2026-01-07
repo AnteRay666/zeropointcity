@@ -64,6 +64,16 @@ const routes: Array<RouteRecordRaw> = [
           canonical: `${BASE_URL}/contact`,
         },
       },
+      {
+        path: "/game",
+        name: "game",
+        component: () => import("../views/GameView.vue"),
+        meta: {
+          title: "Zero Point City - 招募游戏",
+          description: "在 Zero Point City 招募你的伙伴",
+          canonical: `${BASE_URL}/game`,
+        },
+      },
     ],
   },
   {

@@ -4,7 +4,9 @@
     <div class="flex items-center space-x-3">
       <img src="/android-chrome-192x192.png" alt="Logo" class="w-10 h-10 drop-shadow-[0_0_10px_#0ff,0_0_20px_#0ff]" />
       <h1 class="text-2xl text-cyan-400 drop-shadow-[0_0_10px_#0ff,0_0_20px_#0ff]">
-        Zero Point City
+        <RouterLink to="/" class="hover:text-cyan-400 transition" @click="closeMenu">
+          Zero Point City
+        </RouterLink>
       </h1>
     </div>
 
@@ -13,6 +15,7 @@
       <RouterLink to="/" class="hover:text-cyan-400 transition">Home</RouterLink>
       <RouterLink to="/member" class="hover:text-cyan-400 transition">Members</RouterLink>
       <RouterLink to="/memory" class="hover:text-cyan-400 transition">Memory</RouterLink>
+      <RouterLink to="/game" class="hover:text-cyan-400 transition">Game</RouterLink>
       <RouterLink to="/about" class="hover:text-cyan-400 transition">About</RouterLink>
       <!-- <RouterLink to="/contact" class="hover:text-cyan-400 transition">Contact</RouterLink> -->
     </nav>
@@ -37,6 +40,9 @@
         </RouterLink>
         <RouterLink to="/memory" class="hover:text-cyan-400 transition" @click="closeMenu">
           Memory
+        </RouterLink>
+        <RouterLink to="/game" class="hover:text-cyan-400 transition" @click="closeMenu">
+          Game
         </RouterLink>
         <RouterLink to="/about" class="hover:text-cyan-400 transition" @click="closeMenu">
           About
