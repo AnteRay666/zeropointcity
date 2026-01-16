@@ -106,7 +106,10 @@ const routes: Array<RouteRecordRaw> = [
       canonical: `${BASE_URL}/auth`,
     },
   },
-
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/",
+  },
 ]
 
 const router = createRouter({

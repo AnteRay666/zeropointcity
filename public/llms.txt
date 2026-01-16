@@ -1,0 +1,31 @@
+# Zero Point City
+
+> Zero Point City 是一个成员社区网站。
+
+## 网站概述
+
+Zero Point City 是一个为社区成员打造的网站，提供成员展示、记忆分享、游戏娱乐等功能。
+
+## 主要页面
+
+- /: 首页
+- /member: 成员列表
+- /memory: 记忆相册
+- /about: 关于我们
+- /contact: 联系方式
+- /game: 游戏中心
+- /game/gacha: 星际招募（抽卡游戏）
+- /game/wheel: 幸运转盘
+
+## 技术栈
+
+- Vue 3
+- TypeScript
+- Vite
+- Tailwind CSS
+- Vue Router
+- Pinia
+
+## 联系方式
+
+如需了解更多信息，请访问网站的联系页面。

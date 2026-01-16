@@ -1,0 +1,5 @@
+# robots.txt for Zero Point City
+User-agent: *
+Allow: /
+
+Sitemap: https://baigei.01142005.xyz/sitemap.xml
