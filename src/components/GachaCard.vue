@@ -1,14 +1,14 @@
 <!-- components/GachaCard.vue -->
 <template>
-    <div class="group [perspective:1000px] w-64 h-80 cursor-pointer" @click="toggleFlip">
+    <div class="group [perspective:1000px] w-36 h-48 sm:w-48 sm:h-64 md:w-64 md:h-80 cursor-pointer" @click="toggleFlip">
         <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]"
             :class="{ '[transform:rotateY(180deg)]': !isFlipped }">
 
             <!-- 正面 -->
-            <div class="absolute inset-0 bg-[#111] border-2 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center p-5 backface-hidden"
+            <div class="absolute inset-0 bg-[#111] border-2 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center p-2 sm:p-3 md:p-5 backface-hidden"
                 :class="rarityStyles[rarity].border">
 
-                <div class="relative w-full h-56 mb-3 overflow-hidden rounded-lg group/img"
+                <div class="relative w-full h-28 sm:h-40 md:h-56 mb-2 sm:mb-3 overflow-hidden rounded-lg group/img"
                     @click.stop="$emit('preview', imageUrl)">
                     <img :src="imageUrl" alt="Card Image"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" />
@@ -30,11 +30,11 @@
                         :class="rarityStyles[rarity].glow"></div>
                 </div>
 
-                <h3 class="text-lg font-bold mb-1 tracking-wider truncate w-full px-2"
+                <h3 class="text-sm sm:text-base md:text-lg font-bold mb-1 tracking-wider truncate w-full px-1 sm:px-2"
                     :class="rarityStyles[rarity].text">
                     {{ name }}
                 </h3>
-                <div class="mt-auto w-full">
+                <div class="mt-auto w-full hidden sm:block">
                     <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-2"></div>
                     <div class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">
                         Zero Point City Collection
@@ -44,7 +44,7 @@
 
             <!-- 背面 (抽卡时的初始状态) -->
             <div
-                class="absolute inset-0 rounded-2xl border-2 border-gray-700 bg-[#1a1a1a] overflow-hidden flex flex-col justify-center items-center text-center p-5 [transform:rotateY(180deg)] backface-hidden">
+                class="absolute inset-0 rounded-2xl border-2 border-gray-700 bg-[#1a1a1a] overflow-hidden flex flex-col justify-center items-center text-center p-2 sm:p-3 md:p-5 [transform:rotateY(180deg)] backface-hidden">
                 <div class="absolute inset-0 opacity-20">
                     <div class="grid grid-cols-4 gap-2 p-4">
                         <div v-for="n in 16" :key="n" class="w-full aspect-square border border-gray-600 rounded-sm">

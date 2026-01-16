@@ -69,9 +69,29 @@ const routes: Array<RouteRecordRaw> = [
         name: "game",
         component: () => import("../views/GameView.vue"),
         meta: {
-          title: "Zero Point City - 招募游戏",
-          description: "在 Zero Point City 招募你的伙伴",
+          title: "Zero Point City - 游戏中心",
+          description: "Zero Point City 游戏中心",
           canonical: `${BASE_URL}/game`,
+        },
+      },
+      {
+        path: "/game/gacha",
+        name: "gacha",
+        component: () => import("../views/GachaView.vue"),
+        meta: {
+          title: "Zero Point City - 星际招募",
+          description: "在 Zero Point City 招募你的伙伴",
+          canonical: `${BASE_URL}/game/gacha`,
+        },
+      },
+      {
+        path: "/game/wheel",
+        name: "wheel",
+        component: () => import("../views/WheelView.vue"),
+        meta: {
+          title: "Zero Point City - 幸运转盘",
+          description: "转动命运之轮，赢取神秘奖励",
+          canonical: `${BASE_URL}/game/wheel`,
         },
       },
     ],
